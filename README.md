@@ -1,20 +1,20 @@
 🛠️ Mini-site de Produits avec JavaScript et API
-
 🎯 Objectif
+Créer un mini-site web composé de 2 pages dynamiques en utilisant HTML, CSS et JavaScript, qui interagit avec l’API publique DummyJSON.
 
-Créer un petit site web de 2 pages dynamiques utilisant HTML, CSS et JavaScript, qui interagit avec l’API publique dummyjson.com/products.
+🔍 Fonctionnalités
+📦 Affichage d'une liste de produits récupérée depuis l’API.
 
-L’application permet de :
-
-    • Afficher une liste de produits à partir de l’API.
-    • Afficher les détails d’un produit sélectionné sur une page dédiée.
+🔎 Affichage des détails d’un produit sélectionné sur une page dédiée.
 
 🌐 Technologies utilisées
-    • HTML5
-    • CSS3 (avec Bootstrap)
-    • JavaScript (ES6)
-    • API REST (DummyJSON)
+HTML5
 
-    👉 Lien du site en ligne :
+CSS3 (avec Bootstrap)
+
+JavaScript (ES6)
+
+API REST (DummyJSON)
+
+🚀 Lien du site en ligne
 🔗 https://aline-horn.github.io/listeProduitsAPI/
-
