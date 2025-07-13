@@ -1,0 +1,44 @@
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  padding: 3%;
+  font-weight: bold;
+  color: white;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #7f215b;
+  border: 0cap;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #615088;
+  color: white;
+}
+
+body {
+  background-color: #7f215b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+section.container {
+  flex: 1;
+}
+
+#detailsProduit {
+  background-color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3%;
+  border-radius: 8px;
+  width: 80%;
+}
