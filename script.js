@@ -1,10 +1,10 @@
 const listProduits = document.getElementById("articleList");
 
-fetch("https://dummyjson.com/products")
-  .then((res) => res.json())
-  .then((donnees) => {
+async function chargerProduits() {
+  try {
+    const res = await fetch("https://dummyjson.com/products");
+    const donnees = await res.json();
     const produits = donnees.products;
-    // affichage dynamique des produits
 
     listProduits.innerHTML = "";
 
@@ -14,12 +14,12 @@ fetch("https://dummyjson.com/products")
 
       product.innerHTML = `
         <div class="card h-100">
-          <img src="${produit.images[0]}" alt="${
-        produit.title
-      }" class="card-img-top img-thumbnail" style="height: 380px; object-fit: cover;">
+          <img src="${produit.images[0]}" alt="${produit.title}"
+            class="card-img-top img-thumbnail"
+            style="height: 380px; object-fit: cover;">
           <div class="card-body">
             <h5 class="card-title">${produit.title}</h5>
-            <p class="card-text"><strong>Prix: ${produit.price} €</p></strong>
+            <p class="card-text"><strong>Prix: ${produit.price} €</strong></p>
             <p class="card-text text-warning fs-5">${getStars(
               produit.rating
             )}</p>
@@ -31,12 +31,15 @@ fetch("https://dummyjson.com/products")
         </div>
       `;
 
-      listProduits.appendChild(product); // ajoute chaque produit dans la liste
+      listProduits.appendChild(product);
     });
-  })
-  .catch((error) => {
+  } catch (error) {
     console.error("Erreur lors du fetch :", error);
-  });
+    listProduits.innerHTML = `<p>Erreur lors du chargement des produits.</p>`;
+  }
+}
+
+chargerProduits();
 
 function getStars(note) {
   const fullStars = Math.floor(note);
