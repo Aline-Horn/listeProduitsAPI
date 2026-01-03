@@ -4,6 +4,7 @@ fetch("https://dummyjson.com/products")
   .then((res) => res.json())
   .then((donnees) => {
     const produits = donnees.products;
+    // affichage dynamique des produits
 
     listProduits.innerHTML = "";
 
